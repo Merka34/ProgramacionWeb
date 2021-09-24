@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProWebU1Act1", "ProWebU1Act1\ProWebU1Act1.csproj", "{A5C749B8-320D-499C-9F8E-E22979EB354E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProWebU1Act2", "ProWebU1Act2\ProWebU1Act2.csproj", "{7435DC82-1493-4674-9C32-2469C35EC8BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5C749B8-320D-499C-9F8E-E22979EB354E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C749B8-320D-499C-9F8E-E22979EB354E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C749B8-320D-499C-9F8E-E22979EB354E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C749B8-320D-499C-9F8E-E22979EB354E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7435DC82-1493-4674-9C32-2469C35EC8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7435DC82-1493-4674-9C32-2469C35EC8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7435DC82-1493-4674-9C32-2469C35EC8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7435DC82-1493-4674-9C32-2469C35EC8BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58C65808-7FD1-486D-AE16-55224BA3EBE5}
+	EndGlobalSection
+EndGlobal

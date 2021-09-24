@@ -1,0 +1,22 @@
+﻿@model ProWebU1Act2.Models.IndexViewModel
+<html>
+<head>
+    <title>Promedio de alumnos</title>
+</head>
+<body>
+    <hi>Promedio</hi>
+    <form method="get" action="~/Home/Index">
+        <label>Promedio 1:</label>
+        <input type="number" name="Calificacion1" value="@Model.Calificacion1" /><br />
+        <label>Promedio 2:</label>
+        <input type="number" name="Calificacion2" value="@Model.Calificacion2" /><br />
+        <label>Promedio 3:</label>
+        <input type="number" name="Calificacion3" value="@Model.Calificacion3" /><br />
+        <input type="submit" value="Evaluar" /><br /><br />
+        <label>Promedio Final</label>
+        <input type="number" readonly value="@Model.CalificacionFinal" />
+        <label>Estado:</label>
+        <input type="text" readonly value="@Model.Estado" />
+    </form>
+</body>
+</html>
