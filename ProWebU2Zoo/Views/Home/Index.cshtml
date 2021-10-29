@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ProWebU2Zoo.Models.Clase>
+@{
+    Layout = "Layout";
+}
+
+<div class="slides">
+    <img src="images/carousel1.jpg" />
+</div>
+
+<h1>Clasificación de los vertebrados</h1>
+
+<div class="clases">
+
+    @foreach (var e in Model)
+    {
+        <div>
+            <a href="~/Especies-@e.Nombre.Replace(" ", "-")">
+                <img src="~/clases/@(e.Id).jpg" />
+                <h1>@e.Nombre</h1>
+                <p>@e.Descripcion</p>
+            </a>
+        </div>
+    }
+
+</div>
+

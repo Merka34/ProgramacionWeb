@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProWebU1Act1", "ProWebU1Act1\ProWebU1Act1.csproj", "{A5C749B8-320D-499C-9F8E-E22979EB354E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProWebU1Act1", "ProWebU1Act1\ProWebU1Act1.csproj", "{A5C749B8-320D-499C-9F8E-E22979EB354E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProWebU1Act2", "ProWebU1Act2\ProWebU1Act2.csproj", "{7435DC82-1493-4674-9C32-2469C35EC8BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProWebU1Act2", "ProWebU1Act2\ProWebU1Act2.csproj", "{7435DC82-1493-4674-9C32-2469C35EC8BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProWebU2Zoo", "ProWebU2Zoo\ProWebU2Zoo.csproj", "{78930BA3-B963-4AF4-A1F0-A570E49801A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7435DC82-1493-4674-9C32-2469C35EC8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7435DC82-1493-4674-9C32-2469C35EC8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7435DC82-1493-4674-9C32-2469C35EC8BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78930BA3-B963-4AF4-A1F0-A570E49801A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78930BA3-B963-4AF4-A1F0-A570E49801A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78930BA3-B963-4AF4-A1F0-A570E49801A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78930BA3-B963-4AF4-A1F0-A570E49801A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

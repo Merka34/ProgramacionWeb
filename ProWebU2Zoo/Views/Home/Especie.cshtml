@@ -1,0 +1,19 @@
+﻿@model ProWebU2Zoo.Models.Especy
+@{
+    Layout = "Layout";
+}
+
+<div class="especieficha1">
+    <img src="~/especies/@(Model.Id).jpg" />
+    <div>
+        <h1>@Model.Especie</h1>
+        <p><label>Clase:</label><a href="~/especies-@(Model.IdClaseNavigation.Nombre)">@Model.IdClaseNavigation.Nombre</a></p>
+        <p><label>Peso:</label>@(Model.Peso)kg</p>
+        <p><label>Tamaño:</label>@(Model.Tamaño)cm</p>
+        <p><label>Habitat:</label>@Model.Habitat</p>
+        <p><label>Descripción:</label></p>
+        <p>@Model.Observaciones</p>
+    </div>
+
+    <a href="~/especies-@(Model.IdClaseNavigation.Nombre)">Regresar</a>
+</div>

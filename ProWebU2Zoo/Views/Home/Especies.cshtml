@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ProWebU2Zoo.Models.Clase>
+@{
+    Layout="Layout";
+}
+@foreach (var c in Model)
+{
+<h1>
+    <img src="~/clases/@(c.Id).png" />@c.Nombre
+</h1>
+
+<div class="listaEspecies2">
+    @foreach (var es in c.Especies)
+    {
+    <a href="~/Especie/@(es.Especie)">
+        <img src="~/especies/@(es.Id).jpg" title="@es.Especie" />
+    </a>
+    }
+</div>
+}
+<script>
+
+            var c = document.querySelector("main h1 img").cloneNode();
+            document.querySelector("main h1").appendChild(c);
+</script>
