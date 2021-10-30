@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<ProWebU2Zoo.Models.Clase>
 @{
     Layout = "Layout";
+    Random r = new Random();
 }
 
 <div class="slides">
-    <img src="images/carousel1.jpg" />
+    <img src="~/images/carousel@(r.Next(1,4)).jpg" />
 </div>
 
 <h1>Clasificación de los vertebrados</h1>

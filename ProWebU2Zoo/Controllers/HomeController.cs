@@ -22,9 +22,8 @@ namespace ProWebU2Zoo.Controllers
         {
             string _nombre = nombre.Replace("-", " ");
             animalesContext context = new animalesContext();
-            var especies = context.Clases.Include(x => x.Especies).ThenInclude(x => x.IdClaseNavigation).Where(x => x.Nombre == _nombre);
-            //var especies = context.Especies.Where(x => x.IdClaseNavigation.Nombre == nombre.Replace("-", " "));
-            if (especies == null)
+            IEnumerable<Clase> especies = context.Clases.Include(x => x.Especies).ThenInclude(x => x.IdClaseNavigation).Where(x => x.Nombre == _nombre);
+            if (especies.Count()==0)
             {
                 return RedirectToAction("Index");
             }
