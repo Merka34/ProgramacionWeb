@@ -1,0 +1,32 @@
+﻿@model U3RazasPerros.Models.Paises
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "MasterPageAdmin";
+}
+
+<section style="position: relative; width: 100%; height: 40px; float: left; margin: 5px 0;">
+    <h1 style="display: block; position: absolute; font-size: 30px; padding: 0; margin: 0;">Eliminar Pais</h1>
+    <a href="~/Admin/Paises" style="text-decoration: none; width: 15%; text-align: center; display: block; padding: 3px; background-color: saddlebrown; color: white; border: 1px solid black; position: absolute; right: 0;">
+        Atras
+    </a>
+</section>
+<div id="crudM" style="height: auto; display: block; width: 50%; margin: auto; left: 20%; position: relative;">
+    <div id="crudImg" style="top: 15%; width: 100%; display: block; position: absolute;">
+    </div>
+
+    <form method="post" asp-area="Admin" asp-controller="Paises" asp-action="Eliminar">
+        <div style="height: 25px; position: relative; background-color: #247eb0; margin: 5px 0; border: 1px solid black; padding: 5px;">
+            <label style="text-align:center; color: white; display: inline-block; width: 100%;">¿Estas seguro de eliminar @(Model.Nombre)?</label>
+            
+        </div>
+        <p>
+            @Html.ValidationSummary()
+        </p>
+        <input asp-for="Id" value="@Model.Id" hidden />
+        <input style="position: relative; width:100%; margin: 10px 0;" type="submit" value="Eliminar">
+    </form>
+
+</div>
+
+
+<br class="clear" />

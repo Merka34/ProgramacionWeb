@@ -1,0 +1,84 @@
+﻿@model U3RazasPerros.Areas.Admin.Models.RazaCRUDViewModel
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment env
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "MasterPageAdmin";
+}
+
+<section style="position: relative; width: 100%; height: 40px; float: left; margin: 5px 0;">
+    <h1 style="display: block; position: absolute; font-size: 30px; padding: 0; margin: 0;">Editar Raza</h1>
+    <a href="~/Admin/Razas" style="text-decoration: none; width: 15%; text-align: center; display: block; padding: 3px; background-color: saddlebrown; color: white; border: 1px solid black; position: absolute; right: 0;">
+        Atras
+    </a>
+</section>
+<div id="crudM">
+    <form method="post" asp-area="Admin" asp-controller="Razas" asp-action="Editar" enctype="multipart/form-data">
+        <div id="crudAdm">
+            <label>Nombre:</label>
+            <input type="text" asp-for="Raza.Nombre" required><br>
+            <label>Otros Nombres:</label>
+            <input type="text" asp-for="Raza.OtrosNombres"><br>
+            <label>Pais:</label>
+            <select required asp-for="Raza.IdPais" asp-items="@(new SelectList(Model.Paises, "Id", "Nombre"))">
+                <option selected value="">Selecciona un pais</option>
+            </select><br>
+            <label>Peso Mínimo:</label>
+            <input asp-for="Raza.PesoMin" type="number" required><br>
+            <label>Peso Máximo:</label>
+            <input asp-for="Raza.PesoMax" type="number" required><br>
+            <label>Altura Mínima:</label>
+            <input type="number" asp-for="Raza.AlturaMin" required><br>
+            <label>Altura Máxima:</label>
+            <input type="number" asp-for="Raza.AlturaMax" required><br>
+            <label>Esperanza de vida:</label>
+            <input type="number" asp-for="Raza.EsperanzaVida" required><br>
+            <label>Patas:</label>
+            <input type="text" asp-for="Raza.Caracteristicasfisicas.Patas"><br>
+            <label>Cola:</label>
+            <input type="text" asp-for="Raza.Caracteristicasfisicas.Cola"><br>
+            <label>Hocico:</label>
+            <input type="text" asp-for="Raza.Caracteristicasfisicas.Hocico"><br>
+            <label>Pelo:</label>
+            <input type="text" asp-for="Raza.Caracteristicasfisicas.Pelo"><br>
+            <label>Color:</label>
+            <input type="text" asp-for="Raza.Caracteristicasfisicas.Color"><br>
+            <label>Descripción:</label>
+            <input asp-for="Raza.Id" hidden />
+            <textarea asp-for="Raza.Descripcion" required></textarea>
+            <p id="error">
+                @Html.ValidationSummary()
+            </p>
+        </div>
+        <div id="crudImg">
+            @if (System.IO.File.Exists($"{env.WebRootPath}/imgs_perros/{Model.Raza.Id}_0.jpg"))
+            {
+                <img id="imagePreview" src="~/imgs_perros/@(Model.Raza.Id)_0.jpg" alt="Vista previa de la imagen">
+            }
+            else
+            {
+                <img id="imagePreview" src="~/imgs_perros/NoPhoto.jpg" alt="Vista previa de la imagen">
+            }
+            <input type="file" id="fileImage" name="imagen" accept="image/jpeg">
+        </div>
+        <input type="submit" value="Editar">
+    </form>
+
+</div>
+<br class="clear" />
+
+<script>
+    function mostrarImagen(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.querySelector('#imagePreview').src = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    document.querySelector("#fileImage").addEventListener("change", event => {
+        mostrarImagen(event.target)
+    });
+
+</script>

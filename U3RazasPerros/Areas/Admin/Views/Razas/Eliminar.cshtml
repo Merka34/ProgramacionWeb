@@ -1,0 +1,39 @@
+﻿@model U3RazasPerros.Models.Razas;
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment env
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "MasterPageAdmin";
+}
+
+<section style="position: relative; width: 100%; height: 40px; float: left; margin: 5px 0;">
+    <h1 style="display: block; position: absolute; font-size: 30px; padding: 0; margin: 0;">Eliminar Raza</h1>
+    <a href="~/Admin/Razas" style="text-decoration: none; width: 15%; text-align: center; display: block; padding: 3px; background-color: saddlebrown; color: white; border: 1px solid black; position: absolute; right: 0;">
+        Atras
+    </a>
+</section>
+<div id="crudM" style=" display: block; width: 50%; margin: auto; left: 20%; position: relative;">
+    <div id="crudImg" style="top: 15%; width: 100%; display: block; position: absolute;">
+        @if (System.IO.File.Exists($"{env.WebRootPath}/imgs_perros/{Model.Id}_0.jpg"))
+        {
+            <img id="imagePreview" src="~/imgs_perros/@(Model.Id)_0.jpg" alt="Vista previa de la imagen">
+        }
+        else
+        {
+            <img id="imagePreview" src="~/imgs_perros/NoPhoto.jpg" alt="Vista previa de la imagen">
+        }
+    </div>
+    <p style="width: 100%; text-align: center; font-size: larger; display: block; position: absolute;">¿Seguro de eliminar a la raza @(Model.Nombre)?</p>
+    <p>
+        @Html.ValidationSummary()
+    </p>
+    <form method="post" asp-area="Admin" asp-controller="Razas" asp-action="Eliminar">
+        <input asp-for="Nombre" value="@(Model.Nombre)" hidden />
+        <input asp-for="Id" value="@(Model.Id)" hidden />
+        <input style="width:100%" type="submit" value="Eliminar">
+    </form>
+
+</div>
+
+
+<br class="clear" />
+
